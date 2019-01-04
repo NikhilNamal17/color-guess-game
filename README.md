@@ -29,5 +29,5 @@ The super hard mode consits of total 9 squares of random colors to guess.
 
 <br>
 
-This project was developed while learning web development bootcamp course by Colt Steels.
+
 
