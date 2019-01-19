@@ -1,4 +1,4 @@
-## The Great RGB Color Guessing Game [https://nikhilnamal17.github.io/color-guess-game/]
+## [The Great RGB Color Guessing Game] (https://nikhilnamal17.github.io/color-guess-game/)
 
 ### This is a smiple rgb color guessing game. 
 The Game has is all about picking the right colour from the randomly genrated square's of colors. Try the demo by clicking the above link.
