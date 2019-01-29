@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## [The Great RGB Color Guessing Game](https://nikhilnamal17.github.io/color-guess-game/)
 
 ### This is a smiple rgb color guessing game. 
