@@ -7,6 +7,11 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
 var modeButtons = document.querySelectorAll(".mode");
+var levels = [
+    {name: "Easy", squares: 3},
+    {name: "Hard", squares: 6},
+    {name: "Super Hard", squares: 9}
+];
 
 init();
 
@@ -18,22 +23,16 @@ function init() {
 
 
 function modeSetup() {
-    for (var i = 0; i < modeButtons.length; i++) {
-        modeButtons[i].addEventListener("click", function() {
-            modeButtons[0].classList.remove("selected");
-            modeButtons[1].classList.remove("selected");
-            modeButtons[2].classList.remove("selected");
-            this.classList.add("selected");
-            if (this.textContent === "Easy") {
-                numSquares = 3;
-            } else if (this.textContent === "Hard") {
-                numSquares = 6;
-            } else if (this.textContent === "Super Hard") {
-                numSquares = 9
-            }
+    Array.from(modeButtons).forEach(mode => {
+        mode.addEventListener('click', function() {
+            Array.from(modeButtons).forEach(m => m.classList.remove('selected'));
+            this.classList.add('selected');
+            var levelFound = levels.find(level => level.name === this.textContent);
+            if (!levelFound) throw Error(`Level ${this.textContent} not found`);
+            numSquares = levelFound.squares;
             reset();
         });
-    }
+    });
 }
 
 function squareSetup() {
